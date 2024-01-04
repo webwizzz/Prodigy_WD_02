@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2d2c45, #1e1e2d);
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+img {
+  width: auto;
+  height: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+p,
+i {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.wrapper {
+  width: max-content;
+  padding: 40px;
+  margin-top: 20px;
+  background: rgba(45, 44, 69, 0.8);
+  box-shadow: 0 10px 40px rgba(45, 44, 69, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+  box-shadow: 0 15px 60px rgba(45, 44, 69, 0.7);
+  transform: scale(1.02);
+}
+
+.main .number {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #4d4d6d;
+  box-shadow: 0 10px 40px rgba(87, 89, 115, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+  background: #39405b;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.lap {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease-in-out;
+}
+
+.lap:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lap:last-child {
+  border-bottom: none;
+}
+
+.lap.active p {
+  color: #cfcfb3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper,
+.lap,
+.btn {
+  animation: fadeIn 0.8s ease-out;
+}
